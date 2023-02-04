@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/DialogFlow/Scenes/DialogFlow.gd" type="Script" id=1]
+[ext_resource path="res://addons/DialogFlow/Scenes/Updater.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/DialogFlow/Scenes/Updater.gd" type="Script" id=3]
+
+[sub_resource type="Image" id=3]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "LumAlpha8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=2]
+flags = 4
+flags = 4
+image = SubResource( 3 )
+size = Vector2( 16, 16 )
+
+[node name="DialogFlow" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "ceira do sinas"
+}
+
+[node name="Updater" parent="." instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Nav" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.04
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="New" type="ToolButton" parent="Nav"]
+margin_right = 28.0
+margin_bottom = 24.0
+icon = SubResource( 2 )
+icon_align = 1
+
+[node name="Load" type="ToolButton" parent="Nav"]
+margin_left = 32.0
+margin_right = 60.0
+margin_bottom = 24.0
+icon = SubResource( 2 )
+
+[node name="VSeparator" type="VSeparator" parent="Nav"]
+margin_left = 64.0
+margin_right = 68.0
+margin_bottom = 24.0
+
+[node name="Documentation" type="ToolButton" parent="Nav"]
+margin_left = 72.0
+margin_right = 202.0
+margin_bottom = 24.0
+text = "Documentation"
+icon = SubResource( 2 )
+
+[node name="Control" type="Control" parent="Nav"]
+margin_left = 206.0
+margin_right = 576.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="Insert" type="MenuButton" parent="Nav"]
+margin_left = 580.0
+margin_right = 649.0
+margin_bottom = 24.0
+text = "Insert"
+icon = SubResource( 2 )
+items = [ "Bold text", SubResource( 2 ), 0, false, false, 0, 0, null, "", false, "Italic text", SubResource( 2 ), 0, false, false, 1, 0, null, "", false, "", null, 0, false, true, 2, 0, null, "", true, "Typing pause", SubResource( 2 ), 0, false, false, 3, 0, null, "", false, "Typing speed change", SubResource( 2 ), 0, false, false, 4, 0, null, "", false ]
+
+[node name="Control2" type="Control" parent="Nav"]
+margin_left = 653.0
+margin_right = 1024.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
